@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Style DOM</title>
+  <style>
+    body {
+      font-family: Arial;
+    }
+
+    .subsButton {
+      background-color: black;
+      border: none;
+      color: white;
+      padding-top: 10px;
+      padding-left: 15px;
+      padding-bottom: 10px;
+      padding-right: 15px;
+      font-weight: bolder;
+      border-radius: 50px;
+      cursor: pointer;
+      margin-bottom: 30px;
+    }
+
+    .is-subscribed {
+      background-color: gray;
+      color: white;
+    }
+
+    .cost-input {
+      font-size: 15px;
+      padding: 10px;
+    }
+
+    .calculatebutton {
+      background-color: green;
+      color: white;
+      border: none;
+      font-size: 15px;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <p>Youtube subscribe button</p>
+
+  <button class="subscribe subsButton" onclick=" subscribe()">
+    Subscribe
+  </button>
+
+  <p>Amazon shiping calculator</p>
+  <input placeholder="custo" class="insira cost-input" onkeydown="handlecostkeydown(event)">
+  <button class="calculatebutton" onclick="calculatetotal()">Calculate</button>
+  <p class="custo_total"></p>
+
+
+
+  <script>
+
+    function subscribe() {
+      const subscribe = document.querySelector('.subscribe');
+
+      if (subscribe.innerText === 'Subscribe') {
+        subscribe.innerHTML = 'Subscribed';
+        subscribe.classList.add('is-subscribed');
+      } else {
+        subscribe.innerHTML = 'Subscribe';
+        subscribe.classList.remove('is-subscribed');
+      }
+    }
+
+    function handlecostkeydown(event) {
+      if (event.key === 'Enter') { calculatetotal() }
+    }
+
+    function calculatetotal() {
+      const inputElement = document.querySelector('.insira')
+      let cost = Number(inputElement.value);
+
+      if (cost < 40) {
+        cost = cost + 10
+      }
+
+      document.querySelector('.custo_total').innerHTML = `$${cost}.`
+    }  
+  </script>
+</body>
+
+</html>

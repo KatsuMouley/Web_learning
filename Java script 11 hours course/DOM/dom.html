@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documents Object Model</title>
+</head>
+<body>
+  <button>
+    Hello
+  </button>
+  <button class="oxi">
+  second button
+  </button>
+
+  <script>
+  console.log(document.querySelector('button').innerHTML);
+  document.querySelector('button').innerHTML = 'Changed';
+  document.querySelector('.oxi').innerHTML = 'Changed';
+
+    const buttonElement = document.querySelector('.oxi');
+
+    console.log(buttonElement)
+
+  /*
+    document.body.innerHTML = 'hello';
+    document.title = 'good job!'
+    */
+ /*
+    console.log(document.title)
+    document.title = 'Changed';
+    console.log(document.body);
+    console.log(typeof document.body);
+    console.log(document.body.innerHTML);
+    document.body.innerHTML = '<button> wow</button>'
+ */
+
+  </script>
+</body>
+</html>

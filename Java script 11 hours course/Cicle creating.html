@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+
+  <style>
+    form {
+  margin-bottom: 20px;
+}
+  </style>
+</head>
+<body>
+  <form>
+    <label for="radius">Insira o valor do raio:</label>
+    <input type="number" id="radius" name="radius">
+    <button type="button" onclick="createCircle()">Criar círculo</button>
+  </form>
+
+  <script>
+function createCircle() {
+  const radius = document.getElementById("radius").value;
+  const circle = document.createElement("div");
+  circle.style.width = `${2 * radius}px`;
+  circle.style.height = `${2 * radius}px`;
+  circle.style.borderRadius = "50%";
+  circle.style.backgroundColor = "red";
+  document.body.appendChild(circle);
+}
+  </script>
+</body>
+</html>

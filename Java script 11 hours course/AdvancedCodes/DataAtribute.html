@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Atributo de Dados em HTML</title>
+</head>
+
+<body>
+    <div id="meuElemento" data-info="Esta é uma informação personalizada."></div>
+
+    <script>
+        // Acesse o atributo de dados usando JavaScript
+        var elemento = document.getElementById("meuElemento");
+        var informacao = elemento.getAttribute("data-info");
+        console.log("Informação personalizada: " + informacao);
+    </script>
+</body>
+
+</html>

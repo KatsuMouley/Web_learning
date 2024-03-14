@@ -1,0 +1,20 @@
+.secondsection{
+
+}
+
+.griddisplay{
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 8% 8% 8%;
+}
+.Item{
+  display: flex;
+  background-color: white;
+  margin: 5px;
+  width: 100px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  font-weight: bolder;
+}

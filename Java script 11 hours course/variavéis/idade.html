@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>idade</title>
+</head>
+<body>
+  <label for="n">Veja se você é maior de idade
+  </label>
+  <input type="age" id="text">
+  <button onclick="idade()">
+    Enviar
+  </button>
+  
+  <script>
+    function idade(n){
+      n = document.getElementById("text").value
+
+      if ( n === "") {
+      console.log('digite algo')
+    }
+    else{
+    if ( n >= 18) {
+      console.log(n)
+      console.log('Maior de idade');
+    }
+    else {
+      console.log(n)
+      console.log('Menor de idade');
+    }
+  
+    }
+    }
+  </script>
+</body>
+</html>

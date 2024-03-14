@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM PROJECTS</title>
+</head>
+<body>
+  <p>Youtube subscribe button</p>
+
+  <button 
+  class="subscribe" 
+  onclick=" subscribe()">
+  Subscribe
+  </button>
+
+<p>Amazon shiping calculator</p>
+<input placeholder="custo" class="insira" onkeydown="handlecostkeydown(event)">
+<button onclick="calculatetotal()">Calculate</button>
+<p class="custo_total"></p>
+
+
+
+  <script>
+
+function subscribe() {
+  const subscribe=document.querySelector('.subscribe');
+  
+  if (subscribe.innerText === 'Subscribe') {
+    subscribe.innerHTML = 'Subscribed';
+  } else {
+    subscribe.innerHTML = 'Subscribe';
+  }
+}
+
+function handlecostkeydown(event) {
+  if (event.key === 'Enter') {calculatetotal()}
+}
+
+function calculatetotal() {
+  const inputElement = document.querySelector('.insira')
+  let cost = Number(inputElement.value);
+
+  if (cost < 40) {
+    cost = cost + 10
+  }
+ 
+  document.querySelector('.custo_total').innerHTML = `$${cost}.`
+}
+
+
+  </script>
+</body>
+</html>

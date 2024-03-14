@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booleans</title>
+</head>
+<body>
+  
+  <script>
+   /*
+   console.log(typeof true);
+    console.log(typeof 5)
+    console.log('false');
+
+    console.log(3 > 5);
+    console.log(5 == '5.00');
+    console.log(5 === '5.00');
+
+    if (true) {
+      console.log('hello');
+    }
+    else {
+      console.log('else')
+    }
+
+    const age = 18;
+
+    if( age >= 18) {
+      console.log("you can drive");
+      console.log("congrats")
+    }
+    else if ( age >= 16) {
+      console.log("almost there")
+    } else {
+      console.log("you can't drive")
+    }
+*/
+
+
+/*
+"VALORES FALSOS E VERDADEIROS"
+
+console.log(true && true)
+console.log(true && false)
+
+console.log(0.2 >= 0 && 0.2 < 1/3)
+
+console.log(1/3)
+
+console.log(true || false);
+console.log(!true);
+  */
+
+  
+/*
+const valor = 0
+  if (valor) {
+    console.log('truthy');
+  } else {
+    console.log('falsy');
+  }
+
+  console.log('kiss me' / 5);
+   
+  console.log(!0);
+
+  let BROOOM;
+  console.log(BROOOM);
+  */
+/*
+true && console.log("truthy")
+
+console.log(5 && "verdades")
+
+const message = false && 'Verdade'
+console.log(message)
+
+const currency = undefined || 'USD';
+console.log(currency)
+*/
+
+
+const n12 = Math.random();
+let result= ''
+console.log( ` seria ${n12}, < 0.5?`)
+
+n12 < 0.5? result = true: result= false;
+console.log('a resposta é', result)
+
+result === true? result = 'heads': result = 'tails';
+console.log('O resultado é', result)
+
+
+/*Agora tente adivinhar o resultado*/
+const guess ='tails'
+console.log('você adivinhou', guess)
+
+const verificando = guess === 'heads' || guess === 'tails';
+console.log('O sistema está ', verificando)
+
+verificando === false? 
+console.log('sua aposta é invalida') :
+guess === result ? 
+  console.log('you guessed right') : console.log('you guessed wrong');
+  ;
+
+
+
+  </script>
+</body>
+</html>

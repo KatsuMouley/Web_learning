@@ -1,0 +1,16 @@
+.firstsection{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+.title{ 
+display: flex;
+background-color: rgb(255, 128, 0);
+color: rgb(255, 255, 255);
+font-family: Arial, sans-serif;
+align-items: center;
+flex-direction: column;
+padding: 50px;
+border-radius: 50% 100% 65%;
+}
